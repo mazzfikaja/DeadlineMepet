@@ -18,18 +18,20 @@
                 <ul>
                     <li><a href="../index.html#home">Beranda</a></li>
                     <li class="has-dropdown">
-                        <a href="#services" class="dropdown-trigger">Layanan <span class="arrow">▾</span></a>
+                        <a href="#" class="dropdown-trigger active">Layanan <span class="arrow">▾</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="web-development.html">Web Development</a></li>
                             <li><a href="mobile-app.html">Mobile App</a></li>
                             <li><a href="social-media.html">Social Media</a></li>
                             <li><a href="design-graphic.html">Design Graphic</a></li>
+                            <li><a href="ui-ux-design.html">UI/UX Design</a></li>
                             <li><a href="video-maker.html">Video Maker</a></li>
                         </ul>
                     </li>
                     <li><a href="../index.html#contact">Kontak</a></li>
                 </ul>
             </nav>
+            <div class="mobile-toggle">☰</div>
         </div>
     </header>
 
@@ -229,6 +231,10 @@
                 popup.classList.remove('show');
                 this.reset();
             });
+        });
+
+        document.querySelector('.mobile-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active-mobile');
         });
     </script>
 </body>
