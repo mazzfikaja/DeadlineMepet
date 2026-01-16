@@ -194,6 +194,8 @@
             font-size: 0.95rem;
             transition: 0.3s;
             position: relative;
+            display: block;
+            padding: 8px 0;
         }
 
         nav a::after {
@@ -206,6 +208,20 @@
             background: var(--primary);
             transition: 0.3s;
             transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+                padding: 10px 0;
+                display: block;
+            }
+            nav a::after {
+                display: none;
+            }
+            nav li:hover a {
+                color: var(--primary);
+            }
         }
 
         nav a:hover { color: var(--primary); }
@@ -608,8 +624,24 @@
         }
 
         @media (max-width: 768px) {
-            nav ul { display: none; }
-            .mobile-toggle { display: block; }
+            nav ul { 
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: rgba(12, 14, 35, 0.98);
+                padding: 20px;
+                gap: 15px;
+                z-index: 999;
+                border-top: 1px solid rgba(0, 255, 157, 0.2);
+            }
+            nav ul.active-mobile { display: flex; }
+            .mobile-toggle { 
+                display: block;
+                z-index: 1000;
+            }
             h1 { font-size: 2.5rem; }
             .services-grid { grid-template-columns: 1fr; }
             .hero { padding-top: 140px; }
@@ -1029,6 +1061,200 @@ nav ul li:hover .arrow {
    ========================================================================== */
 @media (max-width: 768px) {
     
+    /* 1. Global Typography & Centering (Memastikan Semua Judul di Tengah) */
+    h1, h2, .section-title, .services-header h2 {
+        white-space: normal !important;
+        word-wrap: break-word;
+        text-align: center !important;
+        width: 100% !important;
+        font-family: var(--font-main) !important;
+    }
+
+    /* 2. Hero Section (Home Index - Sesuai Keinginanmu Agar Tetap di Tengah) */
+    .hero {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Memastikan tombol di tengah */
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 30px;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 300px;
+    }
+
+    /* 3. Header Layanan (Terpusat) */
+    .services-header {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px !important;
+        padding: 0 20px;
+    }
+
+    .services-header p {
+        text-align: center !important;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 4. Swiper System (Layanan & Pricing - Gaya Tokopedia) */
+    .services-grid, 
+    .pricing-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 20px 20px 40px !important; 
+        gap: 16px !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .services-grid::-webkit-scrollbar, 
+    .pricing-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 5. Card Styling (Layanan) */
+    .service-card {
+        flex: 0 0 80%;
+        min-width: 270px;
+        scroll-snap-align: center;
+        padding: 30px 25px !important;
+        background: var(--bg-card);
+        border-radius: var(--radius-md) !important;
+        text-align: left;
+    }
+
+    /* 6. Card Styling (Pricing) */
+    .price-card {
+        flex: 0 0 85%;
+        min-width: 280px;
+        scroll-snap-align: center;
+        padding: 30px 25px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--bg-card);
+        border: var(--glass-border);
+        border-radius: var(--radius-lg) !important;
+    }
+
+    .price-value {
+        font-size: 2rem !important;
+        margin: 15px 0 !important;
+    }
+
+    /* 7. Workflow (Alur Kerja - Swipeable) */
+    .workflow-linear {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding: 20px 10px 30px !important;
+        gap: 12px !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .workflow-step {
+        flex: 0 0 160px;
+        scroll-snap-align: start;
+        transform: scale(0.9);
+    }
+
+    .step-arrow {
+        display: none;
+    }
+
+    /* 8. FAQ & Detail Page Hero */
+    .service-detail-hero {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+        text-align: center;
+    }
+
+    .faq-list {
+        padding: 0 10px;
+        gap: 12px;
+    }
+
+    .faq-item summary {
+        padding: 20px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* 9. Intro Grid (Layanan Detail Info) */
+    .intro-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .intro-text {
+        text-align: center !important;
+        padding: 0 10px;
+    }
+
+    .intro-text h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 10. Features Swipe (Gaya Tokopedia di Halaman Detail) */
+    .features-list {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding: 10px 20px 30px !important;
+        gap: 16px !important;
+        margin-left: -20px; /* Agar swipe sampai mentok pinggir layar */
+        width: 100vw !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .features-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .features-list .service-card {
+        flex: 0 0 75% !important;
+        min-width: 260px;
+        scroll-snap-align: center;
+        margin-bottom: 0 !important;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    
     /* 1. Global Typography & Centering */
     h1, h2, .section-title {
         white-space: normal !important;
@@ -1353,8 +1579,9 @@ nav ul li:hover .arrow {
         padding: 20px !important;
         font-size: 0.9rem !important;
     }
-}
-.intro-grid {
+
+    /* 9. Intro Grid (Layanan Detail Info) */
+    .intro-grid {
         display: flex !important;
         flex-direction: column !important;
         gap: 30px;
@@ -1370,7 +1597,7 @@ nav ul li:hover .arrow {
         margin-bottom: 15px !important;
     }
 
-    /* 2. Membuat fitur bisa digeser ke samping (Swipe) */
+    /* 10. Features Swipe (Gaya Tokopedia di Halaman Detail) */
     .features-list {
         display: flex !important;
         flex-wrap: nowrap !important;
@@ -1387,12 +1614,12 @@ nav ul li:hover .arrow {
         display: none;
     }
 
-    /* 3. Menyesuaikan kartu fitur di dalam swipe */
     .features-list .service-card {
         flex: 0 0 75% !important;
         min-width: 260px;
         scroll-snap-align: center;
-        margin-bottom: 0 !important; /* Hapus margin bottom dari inline tadi */
+        margin-bottom: 0 !important;
         text-align: left;
     }
+}
 }
