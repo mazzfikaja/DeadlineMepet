@@ -681,10 +681,23 @@
 
             .section-title {
                 font-size: 1.2rem;
+                margin-bottom: 20px;
             }
 
             .marquee-container {
                 padding: 20px 0;
+                overflow: hidden;
+            }
+
+            .glass-shape {
+                width: 120px;
+                height: 90px;
+                padding: 12px;
+            }
+
+            .hero-visual {
+                width: 100%;
+                overflow: hidden;
             }
         }
 
