@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - Deadline Mepet Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="service-page">
+
+    <header id="header" class="scrolled">
+        <div class="container nav-wrapper">
+            <div class="logo" onclick="location.href='../index.html'" style="cursor:pointer">
+                Deadline Mepet Project<span>.</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#home">Beranda</a></li>
+                    <li class="has-dropdown">
+                        <a href="#services" class="dropdown-trigger">Layanan <span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="mobile-app.html">Mobile App</a></li>
+                            <li><a href="social-media.html">Social Media</a></li>
+                            <li><a href="design-graphic.html">Design Graphic</a></li>
+                            <li><a href="video-maker.html">Video Maker</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="service-detail-hero container">
+        <div class="hero-content">
+            <span class="services-label">DIGITAL PRESENCE</span>
+            <h1>WEB <span class="text-accent">DEVELOPMENT.</span></h1>
+            <p class="hero-desc">Ubah pengunjung jadi pembeli. Bikin bisnis buka 24 jam tanpa capek lembur.</p>
+            <button class="btn btn-primary open-wa-popup">Konsultasi Gratis</button>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="pricing-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div class="intro-text">
+                <h2 style="margin-bottom: 20px;">MASIH JUALAN <span class="text-accent">"GHOIB"?</span></h2>
+                <p style="margin-bottom: 15px;">Zaman sekarang, kalau dicari di Google gak ketemu, calon pembeli bakal ragu transfer. Sosmed aja gak cukup, karena algoritma bisa berubah sewaktu-waktu.</p>
+                <p>Website adalah <strong>aset digital</strong> yang 100% milik kamu. Rumah pribadimu di internet.</p>
+            </div>
+            <div class="features-list">
+                <div class="service-card" style="margin-bottom: 20px; min-height: auto; padding: 25px;">
+                    <h3>📱 Mobile First</h3>
+                    <p>Desain responsif. Tampil ganteng di HP, Tablet, maupun Laptop.</p>
+                </div>
+                <div class="service-card" style="margin-bottom: 20px; min-height: auto; padding: 25px;">
+                    <h3>🚀 Super Cepat</h3>
+                    <p>Optimasi kode biar loading ngebut. Pembeli gak suka nunggu web lemot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container" style="background: rgba(255,255,255,0.02); border-radius: 40px;">
+        <div class="services-header" style="text-align: center;">
+            <span class="services-label">Pilihan Paket</span>
+            <h2>PILIH <span class="text-accent">PAKETMU.</span></h2>
+            <p>Transparan. Bayar sekali, milik selamanya (perpanjang domain/tahun).</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>LANDING PAGE</h3>
+                <p>Cocok buat promosi produk spesifik / Ads.</p>
+                <div class="price-value">Rp 999rb</div>
+                <ul class="price-features">
+                    <li><span>✓</span> 1 Halaman Panjang</li>
+                    <li><span>✓</span> Gratis Domain .com</li>
+                    <li><span>✓</span> Tombol WhatsApp Rotator</li>
+                    <li><span>✓</span> Integrasi Pixel/Analytics</li>
+                </ul>
+                <button class="btn btn-outline open-wa-popup" data-package="Landing Page" style="margin-top: auto;">PILIH PAKET</button>
+            </div>
+
+            <div class="price-card featured">
+                <div class="price-badge">TERLARIS</div>
+                <h3>COMPANY PROFILE</h3>
+                <p>Untuk PT, CV, atau Agensi yang butuh kredibilitas.</p>
+                <div class="price-value">Rp 2.5jt</div>
+                <ul class="price-features">
+                    <li><span>✓</span> Maksimal 5 Halaman</li>
+                    <li><span>✓</span> Email Bisnis (nama@pt.com)</li>
+                    <li><span>✓</span> Fitur Blog / Berita</li>
+                    <li><span>✓</span> Gratis Domain .com</li>
+                </ul>
+                <button class="btn btn-primary open-wa-popup" data-package="Company Profile" style="margin-top: auto;">PILIH PAKET</button>
+            </div>
+
+            <div class="price-card">
+                <h3>TOKO ONLINE</h3>
+                <p>Katalog produk banyak & sistem keranjang.</p>
+                <div class="price-value">Rp 4.5jt</div>
+                <ul class="price-features">
+                    <li><span>✓</span> Produk Unlimited</li>
+                    <li><span>✓</span> Hitung Ongkir Otomatis</li>
+                    <li><span>✓</span> Payment Gateway (Opsional)</li>
+                    <li><span>✓</span> Panel Admin & Training</li>
+                </ul>
+                <button class="btn btn-outline open-wa-popup" data-package="Toko Online" style="margin-top: auto;">KONSULTASI</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="services-header" style="text-align: center;">
+            <span class="services-label">Proses Produksi</span>
+            <h2>ALUR KERJA <span class="text-accent">KAMI.</span></h2>
+        </div>
+        <div class="workflow-linear">
+            <div class="workflow-step">
+                <div class="step-number">01</div>
+                <div class="step-info"><h4>ORDER</h4><p>Chat WA</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">02</div>
+                <div class="step-info"><h4>DISKUSI</h4><p>Briefing</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">03</div>
+                <div class="step-info"><h4>DP</h4><p>Tanda Jadi</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">04</div>
+                <div class="step-info"><h4>KERJAIN</h4><p>Magic Process</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">05</div>
+                <div class="step-info"><h4>TESTING</h4><p>Cek Hasil</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">06</div>
+                <div class="step-info"><h4>BAYAR</h4><p>Pelunasan</p></div>
+                <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+                <div class="step-number">07</div>
+                <div class="step-info"><h4>JADI!</h4><p>File Dikirim</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="services-header" style="text-align: center;">
+            <span class="services-label">FAQ</span>
+            <h2>YANG SERING <span class="text-accent">DITANYAKAN.</span></h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Berapa lama pengerjaannya?</summary>
+                <div class="faq-content">Untuk Landing Page 3-5 hari, Company Profile 7-10 hari, dan Toko Online 14-20 hari tergantung kompleksitas.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Apa perlu bayar bulanan?</summary>
+                <div class="faq-content">Tidak ada biaya bulanan ke kami. Namun, Website butuh biaya perpanjangan Domain & Hosting setiap TAHUN (mulai tahun kedua).</div>
+            </details>
+            <details class="faq-item">
+                <summary>Data apa saja yang harus disiapkan?</summary>
+                <div class="faq-content">Logo, Teks/Konten, Foto Produk/Kegiatan, dan Kontak lengkap. Jika belum ada logo, bisa bundling dengan paket desain.</div>
+            </details>
+        </div>
+    </section>
+
+    <div class="wa-popup-overlay" id="waPopup">
+        <div class="wa-popup-content">
+            <div class="wa-header">
+                <h3>Konsultasi Web</h3>
+                <button class="close-popup" id="closePopup">&times;</button>
+            </div>
+            <form class="contact-form" id="popupWAForm">
+                <input type="text" id="popName" placeholder="Nama Lengkap" required>
+                <input type="email" id="popEmail" placeholder="Alamat Email" required>
+                <textarea id="popMessage" rows="4" placeholder="Ceritakan kebutuhan Anda..." required></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim ke WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 50px 0;">
+            <div class="logo">Deadline Mepet Project<span>.</span></div>
+            <p>&copy; 2026 Deadline Mepet Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('waPopup');
+            const openBtns = document.querySelectorAll('.open-wa-popup');
+            const closeBtn = document.getElementById('closePopup');
+            const messageField = document.getElementById('popMessage');
+
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const packageName = this.getAttribute('data-package');
+                    if (packageName) {
+                        messageField.value = `Halo Deadline Mepet! Saya tertarik dengan paket *${packageName}*. Bisa bantu berikan info lebih lanjut?`;
+                    }
+                    popup.classList.add('show');
+                });
+            });
+
+            closeBtn.addEventListener('click', () => popup.classList.remove('show'));
+            window.addEventListener('click', (e) => { if (e.target === popup) popup.classList.remove('show'); });
+
+            document.getElementById('popupWAForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nama = document.getElementById('popName').value;
+                const email = document.getElementById('popEmail').value;
+                const pesan = document.getElementById('popMessage').value;
+                const noWA = "6285713091961"; 
+                const text = `Halo Deadline Mepet! Saya *${nama}* (${email}).\n\n${pesan}`;
+                window.open(`https://wa.me/${noWA}?text=${encodeURIComponent(text)}`, '_blank');
+                popup.classList.remove('show');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
